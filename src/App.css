@@ -1,0 +1,114 @@
+
+@font-face {
+  font-family: "Hanson";
+  src: local("Hanson"), url("../public//fonts/Hanson-Bold.otf");
+  font-weight: normal;
+  font-display: block;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: local("Montserrat"), url("../public//fonts/Montserrat-VariableFont_wght.ttf");
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Urbanist";
+  src: local("Urbanist"), url("../public//fonts/Urbanist-VariableFont_wght.ttf");
+  font-weight: normal;
+}
+
+
+
+/* variable css */
+
+:root {
+
+  /* FONT */
+  --primary-font: Hanson;
+  --secondary-font: Montserrat;
+  --teritary-font:Urbanist;
+
+  /* FONT WEIGHT */
+  --font-normal: 400;
+  --font-medium: 500;
+  --font-semi-bold: 600;
+  --font-bold: 700;
+  --font-extra-bold: 900;
+  
+  /* COLORS */
+  --primary-color: #00d54b;
+  --background-color: #F8F6F6;
+  --dark-color: #000000;
+  --light-color: #FFFFFF;
+
+  /* z-index */
+  --z-tooltip: 10;
+  --z-fixed: 100;
+  --z-modal: 1000;
+
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html{
+  scroll-behavior: smooth;
+ 
+  
+}
+
+body{
+  margin: 0;
+  padding: 0;
+  font-family: var(--primary-font);
+  font-size: var(--font-bold);
+  background-color: var(--background-color);
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-color: var(--dark-color);
+  
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+section{
+  display: flex;
+  
+  min-height: 90%;
+  /* scroll-snap-align: start; */
+  
+}
+button{
+
+  padding: .5rem 1rem;
+  border: none;
+  font-size: 1rem;
+  border-radius: .5em;
+  background-color: var(--light-color);
+  transition: transform .5s;
+  cursor: pointer;
+  
+  
+}
+button:hover {
+  transform: scale(1.1);
+}
+
+a{
+  color: var(--dark-color);
+}
+p{
+  font-size: 1rem ;
+}
+
+@media screen and (max-width:1090px){
+
+  section{
+    min-height: 70%;
+  }
+   
+}

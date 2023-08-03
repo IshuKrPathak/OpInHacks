@@ -1,0 +1,715 @@
+/* .track-text { */
+/* width: 100%;
+    justify-content: center;
+    position: relative;
+    padding-top: 1rem;
+    font-size: 2.3rem;
+    0.031rem */
+/* position: relative;
+    font-family: "Hanson";
+    font-style: normal;
+    font-weight: 700;
+    padding-bottom: 3rem;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    letter-spacing: 0.031rem;
+    text-transform: uppercase;
+    background-color: white;
+}
+
+
+.track-conatainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    width: 100%;
+    background-color: var(--primary-color);
+    padding-top: 2rem;
+    position: relative;
+    overflow: hidden;
+    background-color: white;
+} */
+
+/* .organ-container{   
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+} */
+
+/* .card-section1 {
+    position: absolute;
+    display: flex;
+    align-items: left;
+    flex-direction: row;
+    top: 9rem;
+    justify-items: right;
+    justify-content: right;
+    cursor: pointer;
+    right: 10rem;
+    z-index: 1;
+    width: 25rem;
+    
+    padding: 2rem;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+   
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color:white;);
+
+    
+}
+
+.card1 {
+    width: 38rem;
+    box-shadow: 0px 2px 20px 3px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+
+}
+
+/* .card-text{
+    color: white;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    padding: 1rem 1rem;
+} */
+/* .text {
+    width: 100%;
+}
+
+.img {
+    background-color: rgb(245, 245, 245);
+    width: 100%;
+    height: 23rem;
+
+}
+
+.players {
+
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: left;
+    margin-left: none;
+    margin-right: none;
+    width: 60%;
+    padding-top: 6rem;
+    line-height: 2rem;
+    
+}
+
+.track1 {
+    
+    width: 17rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    flex-direction: column;
+    cursor: pointer;
+    font: var(--primary-font);
+    border-radius: 2rem;
+    margin-bottom: 2rem;
+}
+
+.track2 {
+    width: 17rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    flex-direction: column;
+    cursor: pointer;
+    font: var(--primary-font);
+    border-radius: 2rem;
+    margin-bottom: 2rem;
+}
+
+.track3 {
+    width: 17rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    cursor: pointer;
+    font: var(--primary-font);
+    border-radius: 2rem;
+    margin-bottom: 2rem;
+
+} */
+/* 
+.track4 {
+    width: 17rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font: var(--primary-font);
+    border-radius: 2rem;
+    margin-bottom: 2rem;
+
+} */
+
+/* assests */
+
+/* .img1 {
+    position: absolute;
+    display: block;
+    z-index: 0;
+
+
+}
+
+.hole {
+    bottom: 2rem;
+    right: 25rem;
+    display: block;
+}
+
+.hole2 {
+    top: 0rem;
+    left: 3rem;
+}
+
+.track {
+   
+    top: -3rem;
+    right: 20rem;
+
+} */
+/* 
+.column {
+    top: 10rem;
+    left: 0rem;
+}
+
+.sidestairs2 {
+    bottom: 2rem;
+    left: 1rem;
+}
+
+.greenmonster {
+    top: 1rem;
+    left: 15rem;
+}
+
+.staircubes {
+    width: 10%;
+    height: 10%;
+    top: 2rem;
+    right: 0;
+}
+
+.sidestairs {
+    bottom: 5rem;
+    right: -.5rem;
+}
+
+@media screen and (max-width:1090px) {
+
+    .org {
+        font-size: .8rem;
+    }
+
+    .organize-text-p {
+        font-size: .5rem;
+    } */
+
+/* .organ-container{
+        width: 80%;
+        position: absolute;
+        top: 30%;
+    }
+    .twitter ,.insta{
+        width: 40%;
+    } */
+/* .img1 {
+        display: none;
+    }
+
+} */
+/* @media screen and (max-width:1000px) {
+
+    .card-section1 {
+        flex-direction: column;
+        width: 30%;
+        justify-content: right;
+        right: 3rem;
+        align-items: center;
+
+    }
+    .card-section1 .card1 {
+        max-width: 25%;
+        display: none;
+    }
+
+}
+
+
+@media screen and (max-width:680px) {
+    .card-section1 {
+        flex-direction: column;
+        display: none;
+
+    }
+
+    .card-section1 .card1 {
+        max-width: 25%;
+        display: none;
+    }
+
+    .card-text {
+        align-items: center;
+        padding: .5rem;
+
+    }
+
+    .players {
+        display: block;
+        justify-content: center;
+        max-width: 70%;
+        justify-content: center;
+        font-size: small;
+      
+    }
+
+
+} */
+
+/* @media screen and (max-width:920px){
+    .organ-container{
+        width: 80%;
+        position: absolute;
+        top: 30%;
+    }
+    .card{
+        width: 70%;
+    }
+    
+    .twitter ,.insta{
+        width: 70%;
+    }
+    
+}
+
+@media screen and (max-width:650px) {
+    .organize-text{
+        top: 8%;
+    }
+
+    .entire{
+        height: 200vh;
+}
+    .organ-container{
+        width: 80%;
+        position: absolute;
+        top: 32%;
+    }
+    .content-section{
+        flex: 1 1 100%;
+        height: 100vh;
+        flex-direction: column;
+    }
+    .card{
+        width: 40%;
+    }
+
+    .twitter ,.insta{
+        width: 30%;
+    }
+
+}
+@media screen and (max-width:460px){
+
+    .organize-text-p ,.org{
+        font-size: 0.8rem;
+    }
+    .entire{
+        height: 200vh;
+}
+    .organize-text{
+        top: 10%;
+    }
+    .card{
+        width: 60%;
+    }
+
+    .twitter ,.insta{
+        width: 40%;
+    }
+}
+
+@media screen and (max-width:320px) {
+
+    .organize-text{
+        top: 6%;
+    }
+
+    .entire{
+        height: 170vh;
+}
+    .organ-container{
+        width: 80%;
+        position: absolute;
+        top: 30%;
+    }
+    .content-section{
+        flex: 1 1 100%;
+        height: 100vh;
+        flex-direction: column;
+    }
+    .card{
+        width: 70%;
+    }
+
+    .twitter ,.insta{
+        width: 50%;
+    }
+}
+
+@media screen and (max-width:290px) {
+    .organize-text{
+        top: 4%;
+        font-size: 1.2rem;
+    }
+
+    .entire{
+        height: 200vh;
+}
+    .organ-container{
+        width: 80%;
+        position: absolute;
+        top: 24%;
+    }
+    .content-section{
+        flex: 1 1 100%;
+        height: 100vh;
+        flex-direction: column;
+    }
+    .card{
+        width: 80%;
+    }
+
+    .twitter ,.insta{
+        width: 50%;
+    }
+} */
+/* 
+@media screen and (max-width:680px) {
+    .card-section1 {
+        flex-direction: column;
+        display: none;
+
+    }
+
+    .card-section1 .card1 {
+        max-width: 25%;
+        display: block;
+        flex-direction: column;
+    }
+
+    .card-text {
+        align-items: center;
+        padding: .5rem;
+
+    }
+
+    .socials-buttons {
+        display: flex;
+        justify-content: center;
+    }
+
+
+}
+
+/* Reset default styles for the audio element */
+/* audio {
+    width: 100%;
+    height: 40px;
+    background-color: #f0f0f0;
+    border: none;
+    border-radius: 5px;
+}
+
+/* Style the progress bar container */
+/* audio::-webkit-media-controls-enclosure {
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    padding: 5px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+audio::-webkit-media-controls-play-button {
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+
+audio::-webkit-media-controls-volume-slider {
+    width: 100px;
+    background-color: transparent;
+    border: none;
+}
+
+/* Customize the volume slider track */
+/* audio::-webkit-media-controls-volume-slider-container {
+    margin-left: 10px;
+}
+
+
+audio::-webkit-media-controls-volume-slider-thumb {
+    background-color: #007bff;
+    width: 10px;
+    height: 20px;
+    border-radius: 2px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+
+audio::-webkit-media-controls-timeline {
+    height: 5px;
+    background-color: #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+
+audio::-webkit-media-controls-timeline::-webkit-media-controls-current-time-display,
+audio::-webkit-media-controls-timeline::-webkit-media-controls-time-remaining-display {
+    display: none;
+}
+
+
+audio::-webkit-media-controls-timeline::-webkit-media-controls-played-bar {
+    background-color: #007bff;
+    border-radius: 5px;
+    overflow: hidden;
+}   */
+
+.Theme-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  width: 100%;
+  background-color: white;
+  padding-top: 2rem;
+  position: relative;
+  overflow: hidden;
+}
+.Theme-text {
+  justify-content: center;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+  padding-top: 1rem;
+}
+.Theme-area {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0rem 1rem 1rem 1rem;
+  z-index: 1;
+}
+.left-container {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: left;
+  margin-left: -35rem;
+  width: 20%;
+  padding-top: 2rem;
+  line-height: 2rem;
+}
+.track1 {
+  width: 17rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  cursor: pointer;
+  font: var(--primary-font);
+  border-radius: 0.8rem;
+  margin-bottom: 2rem;
+  transition: font-size 0.2s ease;
+}
+.track1:hover {
+  font-size: 2rem;
+  color: var(--primary-color);
+}
+.right-container {
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  align-items: right;
+  margin-right: -30rem;
+  width: 300px;
+  height: 300px;
+  overflow: hidden;
+  padding-top: 30rem;
+  border-radius: 2rem;
+  height: 12rem;
+  top: 7rem;
+  cursor: pointer;
+  background-color: var(--primary-color);
+  border: 5px solid rgb(0, 0, 0);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.music-card {
+  position: absolute;
+  max-width: 100%;
+  top: -0.23rem;
+  border-radius: 2rem;
+  margin: 2rem;
+  box-shadow: 0px 2px 20px 0px rgba(96, 96, 96, 0.2);
+}
+.music-img {
+  width: 14.2rem;
+  height: 14rem;
+  justify-content: center;
+  align-items: center;
+  object-fit: cover;
+  /* padding: 20%; */
+
+  border-radius: 0.2rem;
+}
+.music-card-text {
+  position: relative;
+  color: var(--primary-font);
+  background-color: white;
+  display: flex;
+  align-items: center;
+  padding: 1rem 1rem;
+  border-radius: 0.2rem;
+}
+.music-text {
+  width: 100%;
+}
+.theme-text-p {
+  opacity: 70%;
+}
+.theme-org {
+  font-size: 1.3rem;
+  font-weight: 800;
+}
+
+/* :root{
+    --maincolor:#fff;
+   --mainlightcoloe :rgba(235,235,235,0.5);
+   --maindimcolor:rgb(228,228,228);
+} */
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+.song-slider {
+  width: 100%;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+}
+.seek-bar {
+  --webkit-appearance: none;
+  width: 100%;
+  height: 5px;
+  border-radius: 10px;
+  background: black;
+
+  cursor: pointer;
+}
+.seek-bar::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 10rem;
+  height: 20px;
+  background: black;
+  box-shadow: 400px 0 0;
+}
+.current-time,
+.song-duration-time {
+  font-size: 10px;
+  color: white !important;
+}
+.song-duration-time {
+  position: absolute;
+  right: 0;
+}
+.controls {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+  margin-top: 20px;
+}
+.play-btn {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: white;
+  cursor: pointer;
+  border: none;
+}
+.play-btn span {
+  position: absolute;
+  top: 50%;
+  left: 39%;
+  transform: translateY(-50%);
+  width: 5px;
+  height: 30px;
+  border-radius: 2px;
+  background: black;
+  transition: 0.5s;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+.play-btn span:nth-child(2) {
+  left: 55%;
+  transform-origin: center;
+}
+.play-btn.pause span:nth-child(2) {
+  transform: translateY(-50%) scaleY(0);
+}
+.play-btn.pause span:nth-child(1) {
+  width: 35%;
+  height: 53%;
+  transform: translate(-10%, -50%);
+  border-radius: 0;
+  clip-path: polygon(0 0, 100% 50%, 100% 50%, 0% 100%);
+}
+.play-btn.pause {
+  animation: pulse 2s linear infinite;
+}
+@keyframes pulse {
+  0% {
+    box-shadow: 0;
+  }
+  50% {
+    box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.1);
+  }
+  100% {
+    box-shadow: 0 0 0 5px rgba(241, 240, 240, 0.4);
+  }
+}
+.btn {
+  width: 40px;
+  height: 40px;
+  background: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  cursor: pointer;
+  color: white;
+}
