@@ -26,22 +26,24 @@ const track4 = require('../../assets/Rectangle.png')
 //   setImageSrc('default-image.jpg'); 
 // };
 const images = { track0, track1, track2, track3, track4 }
-
-
+const trackNames = ['Surprise 1','Surprise 2','Surprise 3','Surprise 4','Surprise 5']
 
 
 export const Tracks = () => {
   const [imageSrc, setImageSrc] = useState(images.track0)
   const [trackNum, setTrackNum] = useState(0)
+  const [isplaying, setIsPlaying] = useState(true)
+  const [currentTime, setCurrentTime] = useState(0.0)
+  const totalTime = 30
 
+  const [audioProgress, setAudioProgress] = useState(0)
+
+  const handlemusicprogressbar = (e) => {
+    setAudioProgress(Number(e.target.value))
+  }
   const changeImage = (newImageSrc) => {
     setImageSrc(newImageSrc);
   };
-
-  const [audioprogress, setaudioprogress] = useState(60)
-  const handlemusicprogressbar = (e) => {
-    setaudioprogress(e.target.value)
-  }
 
   const changeTrackStyle = useCallback(()=>{
     const tracks = Array.from(document.getElementsByClassName('track'));
@@ -55,16 +57,91 @@ export const Tracks = () => {
     })
   },[trackNum])
 
+  const playPrevTrack = (e)=> {
+    e.preventDefault()
+    if(audioProgress>20){
+      setAudioProgress((prev)=> prev-(prev%10)-20)
+    }else{
+      setAudioProgress(0)
+    }
+  }
+
   const playNextTrack = (e)=> {
     e.preventDefault()
-    console.log(trackNum)
-    setTrackNum((prev)=> prev-1 );
+    playNext()
+  }
+
+  const playNext = ()=>{
+    if(audioProgress<80){
+      setAudioProgress((prev)=> prev-(prev%10)+21)
+    }else{
+      setAudioProgress(100)
+    }
+  }
+
+  const playTracks = (e)=>{
+    setIsPlaying(prev=> !prev)
+    e.target.classList.toggle('pause')
+  }
+
+  const formatTime = (seconds)=>{
+    seconds= Math.round(seconds)
+    const minutes = Math.floor(seconds / 60);
+    const remainingSeconds = seconds % 60;
+    const formattedMinutes = String(minutes).padStart(2, '0');
+    const formattedSeconds = String(remainingSeconds).padStart(2, '0');
+    return `${formattedMinutes}:${formattedSeconds}`;
   }
 
   useEffect(()=>{
     setImageSrc(images[`track${trackNum}`])
     changeTrackStyle();
-  },[trackNum,changeTrackStyle])
+
+    // Slider postion and track number relation
+    if(audioProgress <= 100 && audioProgress > 80){
+      setTrackNum(4)
+    }else if(audioProgress <= 80 && audioProgress > 60){
+      setTrackNum(3)
+    }else if(audioProgress <= 60 && audioProgress > 40){
+      setTrackNum(2)
+    }else if(audioProgress <= 40 && audioProgress > 20){
+      setTrackNum(1)
+    }else{
+      setTrackNum(0)
+    }
+
+    if(audioProgress<=100){
+      setCurrentTime(audioProgress*0.3)
+    }
+
+    // Play tracks
+    let intervalIdBar;
+
+    // Function that runs every 0.3 seconds
+    const playAudioBar = () => {
+      if(audioProgress<100){
+        setAudioProgress((prev)=> prev+1);     
+      }else{
+        setAudioProgress(0)
+      }
+      setImageSrc(images[`track${trackNum}`])
+    };
+
+
+
+    if (isplaying) {
+      // Start the interval when isRunning is true
+      intervalIdBar = setInterval(playAudioBar, 300);
+    } else {
+      // Clear the interval when isRunning is false
+      clearInterval(intervalIdBar);
+
+    }
+
+    // Cleanup function to clear the interval when the component unmounts or isRunning changes
+    return () => clearInterval(intervalIdBar);
+  },[trackNum,changeTrackStyle,isplaying,audioProgress])
+
 
   return (
 
@@ -117,50 +194,55 @@ export const Tracks = () => {
           <button className="track track0" onClick={(e) => {
             changeImage(images.track0);
             setTrackNum(0)
+            setAudioProgress(0)
             changeTrackStyle();
             }}>
-              Surprise 1
+              {trackNames[0]}
           </button>
           <button className="track track1" onClick={(e) => {
             changeImage(images.track2);
             setTrackNum(1)
+            setAudioProgress(21)
             changeTrackStyle();
             }}>
-              Surprise 2
+              {trackNames[1]}
           </button>
           <button className="track track2" onClick={(e) => {
             changeImage(images.track3);
             changeTrackStyle();
             setTrackNum(2)
+            setAudioProgress(41)
 
             }}>
-              Surprise 3
+              {trackNames[2]}
           </button>
           <button className="track track3" onClick={(e) => {
             changeImage(images.track4);
             changeTrackStyle();
             setTrackNum(3)
+            setAudioProgress(61)
             }}>
-              Surprise 4
+              {trackNames[3]}
           </button>
           <button className="track track4" onClick={(e) => {
             changeImage(images.track2);
             changeTrackStyle();
             setTrackNum(4)
+            setAudioProgress(81)
             }}>
-              Surprise 5
+              {trackNames[4]}
           </button>
             
         </div>
 
 
-        <div className='right-container'>
-          <div className="music-card ">
+        <div className='right-container' style={{backgroundImage: `url(${imageSrc})`,}}>
+          <div className="music-card">
             <img src={imageSrc} alt="GDSC" className="music-img" />
             <div className="music-card-text">
               <div className="text-music">
-                <p className="theme-text-p">Theme name</p>
-                <p className="theme-org">Theme</p>
+                <p className="theme-text-p">{trackNames[trackNum]}</p>
+                <p className="theme-org">{trackNames[trackNum]}</p>
 
                 {/* <div className="musictimerdiv">
                   <div className='musiccurrenttime'>00.00</div>
@@ -179,25 +261,21 @@ export const Tracks = () => {
               </div>
             </div>
             <div className='song-slider'>
-              <input type="range" value={audioprogress} className='seek-bar' onChange={handlemusicprogressbar
-              } />
-              <span className='current-time'> 00:00</span>
-              <span className='song-duration-time'> 04:00</span>
+              <input type="range" value={audioProgress} className='seek-bar' onChange={handlemusicprogressbar} />
+              <span className='current-time'>{formatTime(currentTime)}</span>
+              <span className='song-duration-time'>{formatTime(totalTime)}</span>
             </div>
 
             <div className='controls'>
-              <button className='btn-control backward-btn' onClick={playNextTrack}
-                disabled={trackNum===0 ? true : false}><img src={pre} alt="" /></button>
-              <button className='play-btn pause'>
-                <span></span>
-                <span></span>
+              <button className='btn-control backward-btn' onClick={playPrevTrack}><img src={pre} alt="" /></button>
+
+              <button className='play-btn pause' onClick={playTracks}>
+                {/* <span></span>
+                <span></span> */}
               </button>
-              <button className='btn-control forward-btn' onClick={(e)=> {
-                e.preventDefault()
-                console.log(trackNum)
-                setTrackNum((prev)=> prev+1);
-                setImageSrc(images[`track${trackNum}`])
-              }} disabled={trackNum===4 ? true : false}><img src={next} alt="" /></button>
+
+
+              <button className='btn-control forward-btn' onClick={playNextTrack}><img src={next} alt="" /></button>
 
             </div>
           </div>
